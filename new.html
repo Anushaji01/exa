@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="new.css">
+</head>
+<body>
+    <a href="knowus.html" class="about-link">Know More About Us</a>
+<div class="left-container">
+</div>
+
+<div class="right-container" id="rightcontainer">
+  <div class="right-content" id="rightcontent">
+    <h1 class="website-name">Exaverse</h1>
+    <p class="subheading">Automatic Exam Seating Arrangement</p>
+    <button class="get-started-btn" id="getStartedBtn">Get Started</button>
+  </div>
+  <div class="login-box" id="loginBox">
+    <h2>Authority Login</h2>
+    <form>
+      <input type="text" placeholder="Username" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</div>
+<script>
+    document.getElementById("getStartedBtn").addEventListener("click", function () {
+  const rightContainer = document.getElementById("rightcontainer");
+  rightContainer.classList.toggle("flipped"); // Toggle the flip effect
+});
+</script>
+</body>
+</html>

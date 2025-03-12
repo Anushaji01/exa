@@ -1,0 +1,104 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background-image: url('know.jpg'); /* Same background image as the main page */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden; /* Prevent scrolling during animation */
+}
+
+/* Container for the content */
+.knowus-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    max-width: 1200px;
+    text-align: center;
+    transform: translateX(-100%); /* Start off-screen to the left */
+    animation: slideIn 0.8s ease-out forwards; /* Slide-in animation */
+}
+
+/* Slide-in Animation */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%); /* Start off-screen */
+    }
+    to {
+        transform: translateX(0); /* Slide into the center */
+    }
+}
+
+/* Website Name Styling */
+.website-name {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #274e77; /* Dark blue color */
+    font-family: cursive;
+    margin-bottom: 20px;
+}
+
+/* About Text Styling */
+.about-text {
+    font-size: 1.2rem;
+    font-family: Tahoma, sans-serif;
+    color: #44618a; /* Lighter blue color */
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* Features List Styling */
+.features-list {
+    text-align: left;
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.features-list li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Go Back Button Styling */
+.go-back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6b6b; /* Red color */
+    color: white;
+    border: none;
+    border-radius: 25px; /* Rounded corners */
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.go-back-btn:hover {
+    background-color: #ff4757; /* Darker red on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.go-back-btn:active {
+    transform: translateY(0); /* Reset lift on click */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Reset shadow on click */
+}

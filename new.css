@@ -1,0 +1,178 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    background-image: url('office-desk-table-with-pencils-supplies.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 0 40px;
+  }
+  
+  /* Website Name Styling */
+  .website-name {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #274e77;
+    font-family: cursive;
+    margin-bottom: 10px;
+  }
+  
+  /* Subheading Styling */
+  .subheading {
+    font-size: 1.2rem;
+    font-family: Tahoma;
+    color: #44618a;
+    margin-bottom: 30px;
+  }
+  
+  /* Get Started Button Styling */
+  .get-started-btn {
+    background-color: #12729b;
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .get-started-btn:hover {
+    background-color: #9ccaf2;
+  }
+  
+  .get-started-btn:active {
+    transform: scale(0.95);
+  }
+  
+  /* Right Container Styling */
+  .right-container {
+    width: 50%;
+    height: 70vh;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    text-align: left;
+    perspective: 1000px;
+    position: relative;
+  }
+  
+  /* Front and Back Faces of the Flip */
+  .right-content,
+  .login-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.4s;
+    transform-style: preserve-3d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  
+  /* Front Face (Visible by Default) */
+  .right-content {
+    transform: rotateY(0deg);
+  }
+  
+  /* Back Face (Hidden by Default) */
+  .login-box {
+    transform: rotateY(180deg);
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content:center; /* Pushes content to top and bottom */
+    align-items: center;
+    padding: 100px;
+    border-radius: 20px;
+  }
+  
+  /* Flip Effect When the Container Has the 'flipped' Class */
+  .right-container.flipped .right-content {
+    transform: rotateY(180deg);
+  }
+  
+  .right-container.flipped .login-box {
+    transform: rotateY(0deg);
+  }
+  
+  /* Styling for the Login Box */
+  .login-box h2 {
+    font-size: 2rem;
+    color: #274e77;
+    margin-bottom: 10px;
+    text-align: center;
+    
+
+  }
+  
+  .login-box input {
+    width: 80%;
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  .login-box form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+  .login-box button {
+    padding: 10px 20px;
+    background-color: #12729b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .login-box button:hover {
+    background-color: #9ccaf2;
+  }
+  
+  /* About Link Styling */
+  .about-link {
+    position: absolute;
+    top: 60px;
+    right: 220px;
+    font-size: 1rem;
+    color: #dadada;
+    text-decoration:#44618a;
+    font-weight: bold;
+  }
+  
+  .about-link:hover {
+    text-decoration:underline;
+  }
+  /* Style for the input container */
